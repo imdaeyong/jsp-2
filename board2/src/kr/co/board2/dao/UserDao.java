@@ -8,6 +8,7 @@ import java.sql.Statement;
 import kr.co.board2.config.DBConfig;
 import kr.co.board2.config.SQL;
 import kr.co.board2.vo.TermsVO;
+import kr.co.board2.vo.UserVO;
 
 public class UserDao {
 
@@ -43,7 +44,30 @@ public class UserDao {
 		return vo;
 	}
 	
-	
-	
+	public void insertUser(UserVO vo) throws Exception {
+		// 1단계, 2단계
+		Connection conn = DBConfig.getConnection();
+		
+		// 3단계
+		PreparedStatement psmt = conn.prepareStatement(SQL.INSERT_USER);
+		psmt.setString(1, vo.getUid());
+		psmt.setString(2, vo.getPass());
+		psmt.setString(3, vo.getName());
+		psmt.setString(4, vo.getNick());
+		psmt.setString(5, vo.getEmail());
+		psmt.setString(6, vo.getHp());
+		psmt.setString(7, vo.getZip());
+		psmt.setString(8, vo.getAddr1());
+		psmt.setString(9, vo.getAddr2());
+		psmt.setString(10, vo.getRegip());
+		
+		// 4단계
+		psmt.executeUpdate();
+		
+		// 5단계
+		// 6단계
+		psmt.close();
+		conn.close();
+	}
 	
 }

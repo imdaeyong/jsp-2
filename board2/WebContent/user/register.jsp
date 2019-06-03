@@ -6,15 +6,13 @@
 		<title>회원가입</title>
 		<link rel="stylesheet" href="/board2/css/style.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="/board2/js/userDuplicateCheck.js"></script>
 		<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 		<script src="/board2/js/zipcode.js"></script>
-		<script src="/board2/js/userRegValidation.js"></script>
 	</head>
 	<body>
 		<div id="member">
 			<section class="register">
-				<form id="regForm" action="./proc/register.jsp" method="POST">
+				<form id="regForm" action="/board2/user/register.do" method="POST">
 					<section>
 						<table>
 							<caption>사이트 이용정보 입력</caption>

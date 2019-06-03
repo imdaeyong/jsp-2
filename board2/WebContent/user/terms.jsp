@@ -39,8 +39,8 @@
 			</section>
 			
 			<div>
-				<a href="/board2/user/login.jsp" class="btnCancel">취소</a>
-				<a href="/board2/user/register.jsp" class="btnNext">다음</a>
+				<a href="/board2/user/login.do" class="btnCancel">취소</a>
+				<a href="/board2/user/register.do" class="btnNext">다음</a>
 			</div>
 			
 		</div>
