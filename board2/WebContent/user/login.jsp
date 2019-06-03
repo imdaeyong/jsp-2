@@ -10,7 +10,7 @@
 	<body>
 		<div id="member">
 			<section class="login">		
-				<form action="/board2/user/proc/login.jsp" method="post">
+				<form action="/board2/user/login.do" method="post">
 					<table>
 						<tr>
 							<td><img src="/board2/img/login_ico_id.png" alt="아이디" /></td>

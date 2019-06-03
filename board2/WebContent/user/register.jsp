@@ -21,6 +21,12 @@
 						dataType: 'json',
 						success: function(data){
 							
+							if(data.count == 1){
+								alert('이미 사용중인 아이디 입니다.');
+							}else{
+								alert('사용 할 수 있는 아이디 입니다.');
+							}
+							
 						}
 					});
 					
