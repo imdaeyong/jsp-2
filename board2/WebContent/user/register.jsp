@@ -8,6 +8,33 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 		<script src="/board2/js/zipcode.js"></script>
+		<script>
+			
+			$(function(){
+				
+				$('input[name=id]').focusout(function(){
+					
+					var uid = $(this).val();
+					
+					$.ajax({
+						url: '/board2/user/uidCheck.do?uid='+uid,						
+						dataType: 'json',
+						success: function(data){
+							
+						}
+					});
+					
+					
+				});
+				
+				
+				
+				
+			});
+		
+		
+		</script>
+		
 	</head>
 	<body>
 		<div id="member">

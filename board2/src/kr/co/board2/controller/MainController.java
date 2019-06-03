@@ -3,6 +3,7 @@ package kr.co.board2.controller;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -88,9 +89,14 @@ public class MainController extends HttpServlet {
 		
 		
 		if(result.startsWith("redirect:")) {
-			
+			// 리다이렉트
 			String redirect = result.substring(9);
 			resp.sendRedirect(redirect);
+			
+		}else if(result.startsWith("{")) {
+			// json 출력
+			PrintWriter out = resp.getWriter();
+			out.print(result);
 			
 		}else {
 			// view 포워드

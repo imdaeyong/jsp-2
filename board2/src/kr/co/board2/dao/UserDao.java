@@ -70,4 +70,39 @@ public class UserDao {
 		conn.close();
 	}
 	
+	public int uidCheck(String uid) throws Exception {
+		
+		// 1단계, 2단계
+		Connection conn = DBConfig.getConnection();
+		// 3단계
+		PreparedStatement psmt = conn.prepareStatement(SQL.SELECT_USER_COUNT);
+		psmt.setString(1, uid);
+		
+		// 4단계
+		ResultSet rs = psmt.executeQuery();
+		
+		// 5단계
+		int count = 0;
+		
+		if(rs.next()) {
+			count = rs.getInt(1);			
+		}
+		
+		// 6단계
+		rs.close();
+		psmt.close();
+		conn.close();
+		
+		return count;
+	}
+	
+	
 }
+
+
+
+
+
+
+
+
