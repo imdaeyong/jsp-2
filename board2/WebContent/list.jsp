@@ -11,7 +11,7 @@
 			<h3>글목록</h3>
 			<!-- 리스트 -->
 			<div class="list">
-				<p class="logout">님! 반갑습니다. <a href="/board2/user/proc/logout.jsp">[로그아웃]</a><p>
+				<p class="logout">${ user.nick }님! 반갑습니다. <a href="/board2/user/logout.do">[로그아웃]</a><p>
 				<table>
 					<tr>
 						<td>번호</td>
